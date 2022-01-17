@@ -1,0 +1,6 @@
+module_a:
+  ip: 192.168.0.4
+  port: 8888
+
+experiment_socket:
+  port: 5555

@@ -16,8 +16,8 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/instrument/{command}")
-def instrument_command(command):
-    socket.send_string(command)
+@app.get("/{module}/{command}")
+def instrument_command(module, command):
+    socket.send_json({module: command})
     message = socket.recv()
     return {"message": command, "value": message}
